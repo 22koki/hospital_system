@@ -1,15 +1,10 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const express = require('express');
+const router = express.Router();
+const doctorController = require('../controllers/doctors');
 
-const Doctor = sequelize.define('Doctor', {
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  specialty: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-});
+router.post('/', doctorController.createDoctor);
+router.get('/', doctorController.getAllDoctors);
+router.put('/:id', doctorController.updateDoctor);
+router.delete('/:id', doctorController.deleteDoctor);
 
-module.exports = Doctor;
+module.exports = router;
