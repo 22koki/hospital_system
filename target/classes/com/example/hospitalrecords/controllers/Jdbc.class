@@ -1,0 +1,39 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class SQLiteConnection {
+
+    private static Connection connection;
+
+    public static Connection getConnection() {
+        if (connection == null) {
+            try {
+                // Load SQLite JDBC driver
+                Class.forName("org.sqlite.JDBC");
+
+                // SQLite database path
+                String dbPath = "jdbc:sqlite:path/to/hospital.db";
+
+                // Establish connection
+                connection = DriverManager.getConnection(dbPath);
+                System.out.println("Connected to SQLite database.");
+
+            } catch (ClassNotFoundException | SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return connection;
+    }
+
+    public static void closeConnection() {
+        try {
+            if (connection != null && !connection.isClosed()) {
+                connection.close();
+                System.out.println("Connection to SQLite database closed.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}

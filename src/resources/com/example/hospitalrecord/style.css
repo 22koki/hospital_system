@@ -1,77 +1,112 @@
 .root {
-
-    -fx-background-color: linear-gradient(
+  background-color: #00BBF0; /* Fallback background color */
+  -fx-background-color: linear-gradient(
       from 0% 0% to 100% 200%,
       repeat,
       #00BBF0 0%,
       #BAE8E8 50%
-    );
-    -fx-font-family: "Libre Baskerville", "sans-serif";
-
+  );
+  font-family: "Libre Baskerville", "sans-serif"; /* Standard property */
+  -fx-font-family: "Libre Baskerville", "sans-serif";
 }
 
-
-
-Button{
--fx-background-color: #4E9EEA;
- -fx-border: none;
- -fx-color: white;
--fx-transition-duration: 0.7s;
+Button {
+  background-color: #4E9EEA; /* Fallback background color */
+  -fx-background-color: #4E9EEA;
+  border: none; /* Standard property */
+  -fx-border: none;
+  color: white; /* Standard property */
+  -fx-text-fill: white; /* Corrected property */
+  transition-duration: 0.7s; /* Standard property */
+  -fx-transition-duration: 0.7s;
 }
+
 Button:hover {
+  background-color: #BAE8E8; /* Fallback background color */
   -fx-background-color: #BAE8E8;
-  -fx-color: white;
-  -fx-box-shadow: 0 12px 16px ;
-}
-Label{
-
--fx-linear-gradient(#141e30, #243b55);
- -fx-font-family: "Libre Baskerville", "sans-serif";
--fx-text-align: center;
--fx-text-decoration: none;
- -fx-display: inline-block;
- -fx-font-size: 25px;
-
+  color: white; /* Standard property */
+  -fx-text-fill: white; /* Corrected property */
+  box-shadow: 0 12px 16px; /* Standard property */
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 12, 0, 0, 0);
 }
 
-
-
-
-#lable1 {
--fx-linear-gradient(#141e30, #243b55);
--fx-font-family: "Libre Baskerville", "sans-serif";
--fx-text-align: center;
--fx-text-decoration: none;
--fx-display: inline-block;
--fx-font-size: 28px;
+Label {
+  background-color: #141e30; /* Fallback background color */
+  -fx-background-color: linear-gradient(#141e30, #243b55);
+  font-family: "Libre Baskerville", "sans-serif"; /* Standard property */
+  -fx-font-family: "Libre Baskerville", "sans-serif";
+  text-align: center; /* Standard property */
+  -fx-text-alignment: center;
+  text-decoration: none; /* Standard property */
+  -fx-text-decoration: none;
+  display: inline-block; /* Standard property */
+  -fx-display: inline-block;
+  font-size: 25px; /* Standard property */
+  -fx-font-size: 25px;
 }
-#login_btn{
--fx-background-color: #29DE92;/* /#4CAF50; */
- -fx-border: none;
- -fx-color: white;
- -fx-padding: 10px 20px;
- -fx-text-align: center;
- -fx-text-decoration: none;
- -fx-display: inline-block;
- -fx-font-size: 15px;
--fx-font-family: "Libre Baskerville", "sans-serif";
--fx-border-radius: 8px;
 
+#label1 {
+  background-color: #141e30; /* Fallback background color */
+  -fx-background-color: linear-gradient(#141e30, #243b55);
+  font-family: "Libre Baskerville", "sans-serif"; /* Standard property */
+  -fx-font-family: "Libre Baskerville", "sans-serif";
+  text-align: center; /* Standard property */
+  -fx-text-alignment: center;
+  text-decoration: none; /* Standard property */
+  -fx-text-decoration: none;
+  display: inline-block; /* Standard property */
+  -fx-display: inline-block;
+  font-size: 28px; /* Standard property */
+  -fx-font-size: 28px;
 }
+
+#login_btn {
+  background-color: #29DE92; /* Fallback background color */
+  -fx-background-color: #29DE92;
+  border: none; /* Standard property */
+  -fx-border: none;
+  color: white; /* Standard property */
+  -fx-text-fill: white; /* Corrected property */
+  padding: 10px 20px; /* Standard property */
+  -fx-padding: 10px 20px;
+  text-align: center; /* Standard property */
+  -fx-text-alignment: center;
+  text-decoration: none; /* Standard property */
+  -fx-text-decoration: none;
+  display: inline-block; /* Standard property */
+  -fx-display: inline-block;
+  font-size: 15px; /* Standard property */
+  -fx-font-size: 15px;
+  font-family: "Libre Baskerville", "sans-serif"; /* Standard property */
+  -fx-font-family: "Libre Baskerville", "sans-serif";
+  border-radius: 8px; /* Standard property */
+  -fx-background-radius: 8px;
+}
+
 #login_btn:hover {
+  background-color: #BAE8E8; /* Fallback background color */
   -fx-background-color: #BAE8E8;
-  -fx-color: white;
-  -fx-box-shadow:  12px 16px ;
+  color: white; /* Standard property */
+  -fx-text-fill: white; /* Corrected property */
+  box-shadow: 12px 16px; /* Standard property */
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 12, 0, 0, 0);
+  border-width: 2px; /* Standard property */
   -fx-border-width: 2px;
+  border-style: solid; /* Standard property */
   -fx-border-style: solid;
+  border-color: white; /* Standard property */
   -fx-border-color: white;
 }
 
 #lol {
--fx-linear-gradient(#FFF8DC, #243b55);
-
--fx-text-align: center;
--fx-text-decoration: none;
--fx-display: inline-block;
--fx-font-size: 45px;
+  background-color: #FFF8DC; /* Fallback background color */
+  -fx-background-color: linear-gradient(#FFF8DC, #243b55);
+  font-size: 45px; /* Standard property */
+  -fx-font-size: 45px;
+  text-align: center; /* Standard property */
+  -fx-text-alignment: center;
+  text-decoration: none; /* Standard property */
+  -fx-text-decoration: none;
+  display: inline-block; /* Standard property */
+  -fx-display: inline-block;
 }
